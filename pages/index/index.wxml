@@ -1,9 +1,10 @@
 <!--pages/index/index.wxml-->
 <view class="indexContainer">
-  <image class="userAvatar" src="/images/index/cart.jpg"></image>
-  <text class="userName">hello {{msg}}</text>
+  <image wx:if='{{userInfo.avatarUrl}}' class="userAvatar" src="{{userInfo.avatarUrl}}"></image>
+  <button class="btn" wx:else bindgetuserinfo='handleGetUserInfo' open-type='getUserInfo'>获取用户信息</button>
+  <text class="userName">hello {{userInfo.nickName}}</text>
   <!-- <input value="{{msg}}"></input> -->
-  <view class="goStudy" catchtap="handleParent">
-    <text catchtap="handleChild">开启小程序之旅</text>
+  <view class="goStudy" catchtap="toList">
+    <text >开启小程序之旅</text>
   </view>
 </view>

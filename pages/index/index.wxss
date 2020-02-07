@@ -16,6 +16,17 @@
   margin: 100rpx 0;
 }
 
+.btn {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+  font-size: 20rpx;
+  background: pink;
+  margin: 100rpx 0;
+  text-align: center;
+  line-height: 200rpx;
+}
+
 .userName {
   font-size: 32rpx;
   font-weight: bold;
