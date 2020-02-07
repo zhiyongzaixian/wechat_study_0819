@@ -5,14 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    msg: '测试初始化数据'
   },
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // console.log(this)
+    // Vue: this.xxx = value
+    // React: this.setState()
+    // 小程序: this.setData()
+    setTimeout(() => {
+      // 注意点： 小程序中注意this指向问题
+      this.setData({
+        msg: '修改之后的值'
+      })
+    }, 2000)
+  },
 
+  // 事件的回调放置的位置同生命周期的钩子函数平级
+  handleParent(){
+    console.log('parent')
+  },
+  handleChild() {
+    console.log('child')
   },
 
   /**
