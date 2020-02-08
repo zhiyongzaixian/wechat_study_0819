@@ -1,18 +1,26 @@
 // pages/list/list.js
+// 引入模板数据
+let listDatas = require('../../datas/list-data.js');
+console.log(listDatas,  typeof listDatas);
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    listArr: [], // 列表数据
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // 更新状态数据
+    this.setData({
+      listArr: listDatas.list_data
+    })
   },
 
   /**

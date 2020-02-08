@@ -2,6 +2,8 @@
 .tmpContainer {
   display: flex;
   flex-direction: column;
+  border-bottom: 1rpx solid #eee;
+  padding-bottom: 10rpx;
 }
 
 
