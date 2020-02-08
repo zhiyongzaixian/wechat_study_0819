@@ -1,0 +1,5 @@
+<template name='listTmp'>
+  <view class="tmpContainer">
+    模板结构
+  </view>
+</template>

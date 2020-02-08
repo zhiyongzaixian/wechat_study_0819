@@ -1,0 +1,4 @@
+/* pages/listTemplate/listTemplate.wxss */
+.tmpContainer {
+  color: red;
+}

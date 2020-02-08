@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/list/list"
-  ],
+    "pages/list/list",
+    "pages/index/index"
+    ],
   "window": {
     "navigationBarBackgroundColor": "#8ed145",
     "navigationBarTextStyle": "black",
@@ -10,5 +10,6 @@
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

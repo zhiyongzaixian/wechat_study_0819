@@ -1,4 +1,7 @@
 <!--pages/list/list.wxml-->
+<!-- 引入模板 -->
+<import src='../listTemplate/listTemplate.wxml'/>
+
 <view class="listContainer">
   <swiper circular indicator-dots indicator-color='green'	indicator-active-color='pink'>
     <swiper-item>
@@ -15,4 +18,6 @@
     </swiper-item>
   </swiper>
 
+  <!-- 列表位置 -->
+  <template is="listTmp" />
 </view>
