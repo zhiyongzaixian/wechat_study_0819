@@ -28,6 +28,7 @@ Page({
     // 需要获取点击模板的下标
     console.log(event)
     let index = event.currentTarget.dataset.index
+    // 路由跳转传参的形式是query的形式url?key=index
     wx.navigateTo({
       url: '/pages/detail/detail?index=' + index,
     })

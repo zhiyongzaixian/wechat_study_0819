@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    detailObj: {}, // 当前页面的数据对象
   },
 
   /**
@@ -17,7 +17,12 @@ Page({
   onLoad: function (options) {
     // options是空对象，如果有路由传参，name传参的数据会作为options键值对
     console.log('options', options)
+    // 对应模块的下标
     let index = options.index
+    // 更新detailObj的数据
+    this.setData({
+      detailObj: listDatas.list_data[index]
+    })
   },
 
   /**

@@ -1,14 +1,14 @@
 <!--pages/detail/detail.wxml-->
 <view class="detailContainer">
-  <image class="detail_header" src="/images/detail/carousel/02.jpg"></image>
+  <image class="detail_header" src="{{detailObj.detail_img}}"></image>
  
   <view class="detail_author_date">
-    <image src="/images/avatar/4.png"></image>
-    <text>钢铁侠</text>
+    <image src="{{detailObj.avatar}}"></image>
+    <text>{{detailObj.author}}</text>
     <text>发布于</text>
-    <text>may 19 2018</text>
+    <text>{{detailObj.date}}</text>
   </view>
-  <text class="detail_company">教育理念</text>
+  <text class="detail_company">{{detailObj.title}}</text>
   <view class="detail_collection_share">
     <view class="col_share_img">
       <image catchtap="handleCollection" src="/images/icon/collection-anti.png"></image>
@@ -17,5 +17,5 @@
     <view class="line"></view>
   </view>
   <button open-type="share">转发此文章</button>
-  <text class="detail_content">让每一个 IT 人，都直接或间接地受到过尚硅谷帮助！尚硅谷由一群有活力、有理想、有责任、有担当的尚硅谷人组成，我们将不负青春，为传播 IT 技术、为软件行业的健康的生态发展贡献力量。</text>
+  <text class="detail_content">{{detailObj.detail_content}}</text>
 </view>
