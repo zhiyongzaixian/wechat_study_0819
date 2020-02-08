@@ -1,7 +1,5 @@
-// pages/list/list.js
-// 引入模板数据
+// pages/detail/detail.js
 let listDatas = require('../../datas/list-data.js');
-console.log(listDatas,  typeof listDatas);
 
 
 Page({
@@ -10,27 +8,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    listArr: [], // 列表数据
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 更新状态数据
-    this.setData({
-      listArr: listDatas.list_data
-    })
-  },
-
-  // 跳转至detail的方法
-  toDetail(event){
-    // 需要获取点击模板的下标
-    console.log(event)
-    let index = event.currentTarget.dataset.index
-    wx.navigateTo({
-      url: '/pages/detail/detail?index=' + index,
-    })
+    // options是空对象，如果有路由传参，name传参的数据会作为options键值对
+    console.log('options', options)
+    let index = options.index
   },
 
   /**
