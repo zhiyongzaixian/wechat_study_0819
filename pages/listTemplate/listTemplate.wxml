@@ -1,5 +1,19 @@
 <template name='listTmp'>
   <view class="tmpContainer">
-    模板结构
+    <view class="avatar_date">
+      <image src="/images/avatar/0.png"></image>
+      <text>2020 0208</text>
+    </view>
+    <text class="company">尚硅谷</text>
+    <image class="tmpImg" src="/images/detail/carousel/01.jpg"></image>
+    <text class="content">让每一个 IT 人，都直接或间接地受到过尚硅谷帮助！尚硅谷由一群有活力、有理想、有责任、有担当的尚硅谷人组成，我们将不负青春，为传播 IT 技术、为软件行业的健康的生态发展贡献力量。
+    </text>
+    <view class="star_view_container">
+      <image src="/images/icon/none-star.png"></image>
+      <text>88</text>
+      <image src="/images/icon/view.png"></image>
+      <text>88</text>
+    </view>
   </view>
+  
 </template>
