@@ -16,7 +16,7 @@ let list_data = [
     attention_count: 66,
     detail: '钢铁战队。。',
     music: {
-      dataUrl: 'http://up.mcyt.net/down/46100.mp3', // 音乐链接
+      dataUrl: 'http://www.0dutv.com/plug/down/up2.php/252147494.mp3', // 音乐链接
       title: 'IF-Ken Arai',   // 音乐标题
       coverImgUrl: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
     },

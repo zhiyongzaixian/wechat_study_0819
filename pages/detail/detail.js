@@ -10,6 +10,7 @@ Page({
   data: {
     detailObj: {}, // 当前页面的数据对象
     isCollected: false, // 标识是否收藏，默认为false为未收藏
+    isMusicPlay: false, // 标识音乐是否播放，默认为未播放
   },
 
   /**
@@ -70,6 +71,29 @@ Page({
       key: 'isCollected',
       data: obj
     })
+  },
+
+  // 处理音乐播放的功能函数
+  musicControl(){
+    // 获取取反之后的值
+    let isMusicPlay = !this.data.isMusicPlay
+    // 修改isMusicPlay的状态
+    this.setData({
+      isMusicPlay
+    })
+
+
+    // 实现音乐播放和停止
+    if (isMusicPlay){
+      let { title, dataUrl, coverImgUrl} = this.data.detailObj.music
+      wx.playBackgroundAudio({
+        title,
+        dataUrl,
+        coverImgUrl
+      })
+    }else {
+      wx.stopBackgroundAudio() 
+    }
   },
 
   /**
