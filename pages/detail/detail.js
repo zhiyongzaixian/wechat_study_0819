@@ -15,6 +15,17 @@ Page({
     isCollected: false, // 标识是否收藏，默认为false为未收藏
     isMusicPlay: false, // 标识音乐是否播放，默认为未播放
   },
+  onShareAppMessage(res){
+    console.log('用户转发')
+    console.log(res)
+    // 自定义转发的内容
+    return {
+      title: '自定义转发内容',
+      path: '/pages/detail/detail', // 必须是当前页面的路径
+      imageUrl: '/images/detail/carousel/01.jpg'
+    }
+
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -45,6 +56,11 @@ Page({
     // 监听音乐是否在播放
     wx.onBackgroundAudioStop(() => {
       console.log('音乐停止播放了。。')
+      // 修改音乐播放的状态
+      this.setData({
+        isMusicPlay: false
+      })
+      appDatas.globalData.isPlay = false
     })
 
     // 判断 当前页面的 音乐是否在播放

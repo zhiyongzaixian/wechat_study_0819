@@ -2,7 +2,8 @@
   "pages": [
     "pages/list/list",
     "pages/detail/detail",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/movies/movies"
   ],
   "window": {
     "navigationBarBackgroundColor": "#489B81",
