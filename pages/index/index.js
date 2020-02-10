@@ -65,7 +65,7 @@ Page({
   toList(){
     // 跳转至List页面
     console.log('xxx')
-    wx.redirectTo({
+    wx.switchTab({
       url: '/pages/list/list'
     })
   },
