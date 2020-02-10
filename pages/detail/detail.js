@@ -1,5 +1,8 @@
 // pages/detail/detail.js
 let listDatas = require('../../datas/list-data.js');
+// 在某一个页面中如何获取全局App的实例
+let appDatas = getApp()
+console.log('App实例： ', appDatas)
 
 
 Page({
@@ -39,7 +42,19 @@ Page({
       })
     }
 
+    // 监听音乐是否在播放
+    wx.onBackgroundAudioStop(() => {
+      console.log('音乐停止播放了。。')
+    })
 
+    // 判断 当前页面的 音乐是否在播放
+    let {isPlay, pageIndex} = appDatas.globalData
+    if (isPlay && pageIndex === index){ // 当前页面的音乐在播放
+      // 修改当前页面的播放状态
+      this.setData({
+        isMusicPlay: true
+      })
+    }
   },
 
   // 处理收藏功能的函数
@@ -84,15 +99,21 @@ Page({
 
 
     // 实现音乐播放和停止
-    if (isMusicPlay){
+    if (isMusicPlay){ // 音乐播放
       let { title, dataUrl, coverImgUrl} = this.data.detailObj.music
       wx.playBackgroundAudio({
         title,
         dataUrl,
         coverImgUrl
       })
-    }else {
+
+      // 将播放的状态存入至App中
+      appDatas.globalData.isPlay = true
+      appDatas.globalData.pageIndex = this.data.index
+    }else {// 音乐停止
       wx.stopBackgroundAudio() 
+      appDatas.globalData.isPlay = false
+      // appDatas.globalData.pageIndex = this.data.index
     }
   },
 

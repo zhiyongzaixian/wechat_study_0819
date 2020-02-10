@@ -12,5 +12,8 @@
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
   },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "sitemapLocation": "sitemap.json"
 }
